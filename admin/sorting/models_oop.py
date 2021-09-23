@@ -31,15 +31,25 @@ class Calculator(object):
 
 @dataclass
 class Grade(object):
+    kor : int
+    eng : int
+    math : int
 
-    def __init__(self, kor, eng, math):
-        self.kor = kor
-        self.eng = eng
-        self.math = math
+    @property
+    def kor(self) -> int: return self.kor
+    @property
+    def eng(self) -> int: return self.eng
+    @property
+    def math(self) -> int: return self.math
+    @kor.setter
+    def kor(self, kor): self.kor = kor
+    @eng.setter
+    def eng(self, eng): self.eng = eng
+    @math.setter
+    def math(self, math): self.math = math
 
     def sum(self):
         return self.kor + self.eng + self.math
-
     def avg(self):
         return self.sum() / 3
 
