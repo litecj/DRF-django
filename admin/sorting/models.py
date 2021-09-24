@@ -16,6 +16,12 @@ class Sorting(object):
         pass
 
     def quick_sort(self):
+        # def partition(lo,hi):
+        #     pivot=A[hi]
+        #     left = lo
+        #     for right in range(lo,hi):
+        #         if A[right] < pivot:
+        #             A{left}, A[right] = A[right], A[left]
         pass
 
 
