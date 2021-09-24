@@ -74,11 +74,23 @@ class Sorting(object):
         # print(merged_arr)
         # return merged_arr
 
-        pass
+    @staticmethod
+    def quick_sort(param:[]):
+        arr = param
+        if len(arr) <= 1:
+            return arr
+        pivot = len(arr) // 2
+        arr1, arr2, arr3 = [], [], []
+        for value in arr:
+            if value < arr[pivot]:
+                arr1.append(value)
+            elif value > arr[pivot]:
+                arr3.append(value)
+            else:
+                arr2.append(value)
+        # print(arr1, arr2, arr3)
+        return Sorting.quick_sort(arr1) + Sorting.quick_sort(arr2) + Sorting.quick_sort(arr3)
 
-    def quick_sort(self):
-
-        pass
 
     def hummm(self):
         arr = self.var_list

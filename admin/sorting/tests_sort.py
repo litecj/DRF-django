@@ -18,10 +18,12 @@ class TestSorting(unittest.TestCase):
         print(f'result : {arr1}')
 
     def test_quick_sort(self):
-        instance = Sorting()
-        instance.random_arr = [9, 8, 7, 6, 5, 3, 2, 4, 1]
-        arr = instance.quick_sort()
-        self.assertEqual(arr, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+        param = [9, 8, 7, 6, 5, 3, 2, 4, 1]
+        arr1 = Sorting.quick_sort(param)
+        arr = [99, 8, 17, 6, 51, 3, 21, 4, 1, 2, 5, 9]
+        arr2 = Sorting.quick_sort(arr)
+        self.assertEqual(arr1, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+        print(arr2)
 
     def test_hummm(self):
         instance = Sorting()
